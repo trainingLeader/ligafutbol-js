@@ -1,9 +1,31 @@
 const divContainerDoctor = document.querySelector('.detailDoctors');
 const divContainerPlayer = document.querySelector('.detailPlayers');
-
+const logoTeamFile = document.querySelector('#logoTeam');
+const imgLogo = document.querySelector(".logoLoad")
 document.addEventListener('DOMContentLoaded', (e) => {
     
 });
+logoTeamFile.addEventListener('change',(e) =>{
+    if(logoTeamFile.value !== ''){
+        // if one of the both input have some value
+        if(logoTeamFile.value !== ''){
+            imgLogo.style.display = "block";
+            base64Encoder(logoTeamFile.files[0]);
+        }
+    } else{
+        imgLogo.style.display = "none";
+    }  
+})
+
+function base64Encoder(blob){
+    // this function will get a blob file and convert into base64 string
+    var reader = new FileReader();
+    reader.readAsDataURL(blob)
+    reader.onloadend = () => {
+        imgLogo.src =reader.result;
+    }
+}
+
 document.querySelector('#addDoctor').addEventListener('click', (e) => {
     divContainerDoctor.insertAdjacentHTML('beforeend', crearMdHTML());
 });
