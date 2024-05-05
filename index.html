@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <script type="module" src="app.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-md-center mt-3">
+            <div class="col-1">
+            </div>
+            <div class="col-10">
+                <div class="card">
+                    <div class="card-header">
+                      BetPlay
+                    </div>
+                    <div class="card-body">
+                      <h5 class="card-title">Registro Equipos Liga</h5>
+                      <form class="row g-3" id="frmDataLiga">
+                        <div class="col-md-6">
+                          <label for="nameTeam" class="form-label">Nombre equipo</label>
+                          <input type="email" class="form-control" name="nameTeam" id="nameTeam">
+                        </div>
+                        <div class="col-md-6">
+                          <label for="inputPassword4" class="form-label">Logo</label>
+                          <input type="text" class="form-control" name="logoTeam" id="logoTeam">
+                        </div>
+                        <div class="col-12">
+                          <label for="inputAddress" class="form-label">Director Tecnico</label>
+                          <input type="text" class="form-control" name="coachTeam" id="coachTeam">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputState" class="form-label">Ciudad Origen</label>
+                            <select id="cityName" name="cityName" class="form-select">
+                              <option selected>Seleccione una ciudad</option>
+                              <option>...</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputState" class="form-label">Fecha fundacion</label>
+                            <input type="date" class="form-control" name="dateTeam" id="dateTeam">
+                        </div>
+                        <div class="col-12">
+                            <div class="card border-warning mb-3" style="max-width: 100%;">
+                                <div class="card-header">Cuerpo medico</div>
+                                <div class="card-body">
+                                  <h5 class="card-title">Registre aqui el cuerpo medico</h5>
+                                  <button type="button" class="btn btn-dark" id="addDoctor">+</button>
+                                  <div class="container detailDoctors">
+
+                                  </div>
+                                </div>
+                              </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="card border-info mb-3" style="max-width: 100%;">
+                                <div class="card-header">Plantel Jugadores</div>
+                                <div class="card-body">
+                                  <h5 class="card-title">Registro de jugadores</h5>
+                                  <button type="button" class="btn btn-dark" id="addPlayer">+</button>
+                                  <div class="container detailPlayers">
+
+                                  </div>
+                                </div>
+                              </div>
+                        </div>
+                        <div class="col-12 justify-content-md-center">
+                          <button type="submit" class="btn btn-primary">Sign in</button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-1">
+            </div>
+          </div>
+    </div>
+</body>
+</html>
